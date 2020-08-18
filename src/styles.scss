@@ -5,3 +5,44 @@ html, body {
     width: 100%;
     margin: 0;
 }
+
+.swal2-popup.swal2-modal {
+	box-shadow: -1px 10px 18px 0px rgba(0, 0, 0, 0.5);
+
+	.swal2-title, .swal2-html-container, .swal2-content {
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+    }
+    
+    .swal2-actions {
+        button {
+            background: #D8AD3D;
+            border-radius: 50px;
+            font-family: "Open Sans", sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+            transition: 0.5s;
+
+            &:focus {
+                box-shadow: none;
+            }
+
+            &:hover {
+                background: #009CD9;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+	.swal2-title {
+		font-size: 30px !important;
+	}
+
+	.title-principal {
+		font-size: 70px !important;
+	}
+}

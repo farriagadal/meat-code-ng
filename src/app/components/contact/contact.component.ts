@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Contact } from 'src/app/models/contact';
-// import { ContactService } from '../services/contact/contact.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactService } from 'src/app/services/contact.service';
-// import Swal from  'sweetalert2';
-// import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact',
@@ -39,6 +37,8 @@ export class ContactComponent implements OnInit {
       console.log(this.contact);
       this.contactService.postContact(this.contact).subscribe(data => {
         this.SuccessNotification();
+      }, error => {
+        this.ErrorServer();
       });
     } else {
       this.ErrorNotification();
@@ -46,32 +46,28 @@ export class ContactComponent implements OnInit {
     }
   }
 
-
   public ErrorNotification(): void {
-    // Swal.fire(
-    //   'Campos incompletos',
-    //   'Por favor rellene todos los campos :)',
-    //   'error'
-    // )
-    alert('Campos incompletos');
+    Swal.fire(
+      'Campos incompletos',
+      'Por favor rellene todos los campos',
+      'error'
+    );
   }
 
   public SuccessNotification(): void {
-    // Swal.fire(
-    //   'Mensaje Enviado!',
-    //   'Recibirá una respuesta en un momento  :)',
-    //   'success'
-    // )
-    alert('Mensaje Enviado');
+    Swal.fire(
+      'Contacto Enviado!',
+      'Gracias por subscribirte',
+      'success'
+    );
   }
 
   public ErrorServer(): void {
-    // Swal.fire(
-    //   'Error de servidor :(',
-    //   'Intente más tarde, mientras lo solucionamos',
-    //   'error'
-    // )
-    alert('Error de servidor');
+    Swal.fire(
+      'Error de servidor',
+      'Intente más tarde, mientras lo solucionamos',
+      'error'
+    );
   }
 
 }

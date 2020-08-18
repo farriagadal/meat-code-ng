@@ -1,45 +1,40 @@
 <section class="articles_content">
-
   <div class="articles_content_title">
     <h2>Nuestros artículos</h2>
     <img src="assets/BRUSH-2.svg">
   </div>
-
-
   <div class="articles_list">
     <div class="articles_menu">
-        <ul>
-            <li [ngClass]="{'selected' : menuOptionSelected === 0}" (click)="getAllArticles()">
-                TODOS
-            </li>
-            <li [ngClass]="{'selected' : menuOptionSelected === 1}" (click)="filterArticles(1)">
-                PRODUCTOS
-            </li>
-            <li [ngClass]="{'selected' : menuOptionSelected === 2}" (click)="filterArticles(2)">
-                RECETAS
-            </li>
-            <li [ngClass]="{'selected' : menuOptionSelected === 3}" (click)="filterArticles(3)">
-                CONSEJOS
-            </li>
-        </ul>
+      <ul>
+        <li [ngClass]="{'selected' : menuOptionSelected === 0}" (click)="getAllArticles()">
+          TODOS
+        </li>
+        <li [ngClass]="{'selected' : menuOptionSelected === 1}" (click)="filterArticles(1)">
+          PRODUCTOS
+        </li>
+        <li [ngClass]="{'selected' : menuOptionSelected === 2}" (click)="filterArticles(2)">
+          RECETAS
+        </li>
+        <li [ngClass]="{'selected' : menuOptionSelected === 3}" (click)="filterArticles(3)">
+          CONSEJOS
+        </li>
+      </ul>
     </div>
     <div class="articles_cards">
-        <div class="articles_card" *ngFor="let article of articles"> 
-            <div class="card_image"  [ngStyle]="{'background-image': 'url(' + article.image + ')' }">
-            </div>
-            <div class="card_text">
-                <div class="card_title">
-                    {{ article.title }}
-                </div>
-                <div class="card_description">
-                    {{ article.content }}
-                </div>
-
-                <a class="card_link" [href]="article.url">Ver más</a>
-            </div>
+      <div class="articles_card" *ngFor="let article of articles">
+        <div class="card_image" [ngStyle]="{'background-image': 'url(' + article.image + ')' }">
         </div>
+        <div class="card_text">
+          <div class="card_title">
+            {{ article.title }}
+          </div>
+          <div class="card_description">
+            {{ article.content }}
+          </div>
+
+          <a class="card_link" [href]="article.url">Ver más</a>
+        </div>
+      </div>
     </div>
-
   </div>
-
 </section>

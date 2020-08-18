@@ -1,25 +1,36 @@
-.contact_content_title {
-  text-align: center;
+.contact_content {
+  margin-top: 100px;
+  margin-bottom: 150px;
 
-  h2 {
-    font-family: "Caveat", cursive;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 80px;
-    margin: 0px;
-    margin-top: 100px;
-    line-height: 100px;
-    z-index: 2;
-    position: relative;
-    color: #3F454A;
+  .contact_content_title {
+    text-align: center;
+
+    h2 {
+      font-family: "Caveat", cursive;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 80px;
+      margin: 0px;
+      line-height: 100px;
+      z-index: 2;
+      position: relative;
+      color: #3F454A;
+    }
+
+    img {
+      margin-top: -55px;
+    }
+
   }
-
-  img {
-    margin-top: -55px;
-  }
-
 }
 
+@media (max-width: 600px) {
+  .contact_content_title {
+    h2 {
+      font-size: 60px;
+    }
+  }
+}
 
 .contact_form {
   width: max-content;
@@ -30,6 +41,16 @@
 
     .group:first-child {
       margin-right: 20px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .double_input {
+      display: block;
+
+      .group:first-child {
+        margin-right: 0px;
+      }
     }
   }
 
@@ -86,7 +107,7 @@
       font-family: 'Open Sans', sans-serif;
       font-size: 13px;
       margin-top: 4px;
-      color: #3F4544;
+      color: #B72C2C;
     }
 
   }
@@ -115,6 +136,5 @@
       background: #009CD9;
     }
   }
-
 
 }

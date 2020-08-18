@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Environment } from 'src/environments/environment';
 import { Contact } from '../models/contact';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -23,7 +24,6 @@ export class ContactService {
     const uri = `${this.api}/subscribe`;
     return this.http.post(uri, contact, { headers: this.headers });
   }
-
 
 }
 
