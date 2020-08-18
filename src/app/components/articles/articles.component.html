@@ -28,12 +28,14 @@
             <div class="card_image"  [ngStyle]="{'background-image': 'url(' + article.image + ')' }">
             </div>
             <div class="card_text">
-                <a class="card_title" [href]="article.url">
+                <div class="card_title">
                     {{ article.title }}
-                </a>
+                </div>
                 <div class="card_description">
                     {{ article.content }}
                 </div>
+
+                <a class="card_link" [href]="article.url">Ver más</a>
             </div>
         </div>
     </div>

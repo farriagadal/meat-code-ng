@@ -102,7 +102,6 @@
                     letter-spacing: 0.01em;
                     color: #3F454A;
                     margin-bottom: 15px;
-                    text-decoration: none;
                 }
     
                 .card_description {
@@ -111,6 +110,29 @@
                     font-size: 14px;
                     line-height: 24px;
                     color: #3F454A;
+                }
+
+                .card_link {
+                    color: #D8AD3D;
+                    font-weight: bold;
+                    font-size: 15px;
+                    line-height: 26px;
+                    letter-spacing: 0.03em;
+                    text-decoration: none;
+                    margin-top: 20px;
+                    text-transform: uppercase;
+                    display: none;
+                }
+            }
+
+            &:hover {
+                .card_text {
+                    .card_title {
+                       color: #D8AD3D;
+                    }
+                    .card_link {
+                        display: block;
+                    }
                 }
             }
         }

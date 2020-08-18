@@ -50,3 +50,19 @@
         margin: 0 15px;
     }
 }
+
+#sub_title {
+    animation: float 2s ease-out;
+}
+
+@keyframes float {
+    0% {
+      transform: translateY(-10px);
+      filter: opacity(0);
+    }
+
+    100% {
+      transform: translateY(0px);
+      filter: opacity(1);
+    }
+}

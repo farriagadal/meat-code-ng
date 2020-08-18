@@ -69,6 +69,7 @@
 
       &.error-input {
         border-color: #B72C2C;
+        color: #B72C2C;
       }
     }
 
@@ -104,9 +105,14 @@
     font-size: 15px;
     text-transform: uppercase;
     color: #FFFFFF;
+    transition: 0.5s;
 
     &:focus {
       outline: 0;
+    }
+
+    &:hover {
+      background: #009CD9;
     }
   }
 
