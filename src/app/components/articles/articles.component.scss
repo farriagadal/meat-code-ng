@@ -1,0 +1,135 @@
+
+
+.articles_content_title {
+    text-align: center;
+    margin-bottom: 70px;
+
+    h2 {
+        font-family: "Caveat", cursive;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 80px;
+        margin: 0px;
+        margin-top: 100px;
+        line-height: 100px;
+        z-index: 2;
+        position: relative;
+        color: #3F454A;
+    }
+
+    img {
+        margin-top: -55px;
+    }
+
+}
+
+.articles_list {
+    display: flex;
+    width: 80%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    .articles_menu {
+        width: 270px;
+        height: 319px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 12px;
+        line-height: 23px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #3F454A;
+        box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07);
+        border-radius: 10px;
+
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 20px;
+
+            li {
+                margin-bottom: 30px;
+                cursor: pointer;
+
+                &:hover, &.selected {
+                    color: #D8AD3D;
+                    font-weight: bold;
+
+                    &::after {
+                        content: url(/assets/right-arrow.svg);
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        .articles_cards { grid-template-columns: repeat(2, 1fr); }
+      }
+
+    @media (min-width: 900px) {
+        .articles_cards { grid-template-columns: repeat(3, 1fr); }
+      }
+
+    .articles_cards {
+        width: 70%;
+        display: flex;
+        margin-left: 25px;
+        display: grid;
+        grid-gap: 25px;
+
+        .articles_card {
+            box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.07);
+            border-radius: 10px;
+            font-family: 'Open Sans', sans-serif;
+
+            .card_image {
+                height: 204px;
+                background-size: cover;
+                border-radius: 10px 10px 0px 0px;
+            }
+
+            .card_text {
+                padding: 25px;
+
+                .card_title {
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 18px;
+                    line-height: 24px;
+                    display: flex;
+                    align-items: center;
+                    letter-spacing: 0.01em;
+                    color: #3F454A;
+                    margin-bottom: 15px;
+                    text-decoration: none;
+                }
+    
+                .card_description {
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #3F454A;
+                }
+            }
+        }
+    }
+}
+
+.articles_card {
+    animation: animation_card 1s;
+}
+
+@keyframes animation_card {
+    0% {
+      transform: translateY(-10px);
+      filter: opacity(0);
+    }
+  
+  
+    100% {
+      transform: translateY(0px);
+      filter: opacity(1);
+    }
+  }
