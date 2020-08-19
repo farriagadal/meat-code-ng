@@ -54,7 +54,7 @@
           font-weight: bold;
 
           &::after {
-            content: url(/assets/right-arrow.svg);
+            content: url(../../../assets/right-arrow.svg);
             float: right;
           }
         }
@@ -176,6 +176,7 @@
 
   .articles_list .articles_cards {
     width: 100% !important;
+    margin-left: 0px;
   }
 
   .articles_menu {
